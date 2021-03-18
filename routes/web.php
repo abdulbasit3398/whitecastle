@@ -19,10 +19,10 @@ Auth::routes();
 
 // Route::get('/', 'HomeController@index')->name('dashboard');
 // Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-Route::get('/pricing', 'HomeController@pricing')->name('pricing');
-Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::get('/my-account', 'HomeController@my_account')->name('my-account');
-Route::post('/send_contact', 'HomeController@send_contact')->name('send_contact');
+// Route::get('/pricing', 'HomeController@pricing')->name('pricing');
+// Route::get('/contact', 'HomeController@contact')->name('contact');
+// Route::get('/my-account', 'HomeController@my_account')->name('my-account');
+// Route::post('/send_contact', 'HomeController@send_contact')->name('send_contact');
 
 
 //Admin Routes
@@ -33,7 +33,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.access','auth'],'names
 
 
 
-Route::post('/payment', 'PaymentController@paymentProcess')->name('payment');
+// Route::post('/payment', 'PaymentController@paymentProcess')->name('payment');
 
 Route::get('/logout', function(){
     Artisan::call('cache:clear');
